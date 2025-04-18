@@ -24,18 +24,13 @@ namespace de3
         void loadlist()
         {
             sqlconnection = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand("Select * from SinhVien", sqlconnection);
             sqlconnection.Open();
-            string query = "select * from SinhVien";
-            adapter = new SqlDataAdapter(query, sqlconnection);
             dt = new DataTable();
+            adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
             dgvSinhVien.DataSource = dt;
             sqlconnection.Close();
-            dgvSinhVien.Columns["MaSv"].HeaderText = "Mã Sinh Viên";
-            dgvSinhVien.Columns["HoTen"].HeaderText = "Họ Tên";
-            dgvSinhVien.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
-            dgvSinhVien.Columns["NoiSinh"].HeaderText = "Nơi Sinh";
-            dgvSinhVien.Columns["GioiTinh"].HeaderText = "Giới Tính";
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -45,21 +40,18 @@ namespace de3
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM SinhVien WHERE 1=1";
-
-            if (!string.IsNullOrEmpty(txtSearchMasv.Text))
-                sql += " AND MaSV LIKE '%" + txtSearchMasv.Text + "%'";
-
-            if (!string.IsNullOrEmpty(txtSearchNoiSinh.Text))
-                sql += " AND NoiSinh LIKE N'%" + txtSearchNoiSinh.Text + "%'";
-
+            string sql = "Select * from SinhVien where 1=1";
+            sql += "AND MaSV LIKE '%" + txtSearchMasv.Text + "%'";
+            sql += "AND NoiSinh LIKE '%" + txtSearchNoiSinh.Text + "%'";
             if (rdoNam.Checked) sql += " AND GioiTinh = N'Nam'";
             if (rdoNu.Checked) sql += " AND GioiTinh = N'Nữ'";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, connectionString);
-            DataTable dt = new DataTable();
+            sqlconnection = new SqlConnection(connectionString);
+            sqlconnection.Open();
+            adapter = new SqlDataAdapter(sql, sqlconnection);
+            dt = new DataTable();
             adapter.Fill(dt);
             dgvSinhVien.DataSource = dt;
+            sqlconnection.Close() ;
 
         }
     }

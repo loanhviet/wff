@@ -22,3 +22,4 @@ D:\CSharp\Ontap\De7\WinFormsApp\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.
 D:\CSharp\Ontap\De7\WinFormsApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 D:\CSharp\Ontap\De7\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.csproj.AssemblyReference.cache
 D:\CSharp\Ontap\De7\WinFormsApp\obj\Debug\net8.0-windows\WinForms.79E25943.Up2Date
+D:\CSharp\Ontap\De7\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.sourcelink.json

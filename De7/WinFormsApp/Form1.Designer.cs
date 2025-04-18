@@ -45,6 +45,15 @@
             txtThanhTien = new TextBox();
             label2 = new Label();
             tabPage5 = new TabPage();
+            button1 = new Button();
+            label3 = new Label();
+            txtDoanhThu = new TextBox();
+            dgvKetQua = new DataGridView();
+            dateTimePicker2 = new DateTimePicker();
+            dtpDenNgay = new DateTimePicker();
+            cbDoUong = new ComboBox();
+            chkNgay = new CheckBox();
+            chkDoUong = new CheckBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -54,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvThanhToan).BeginInit();
             panel5.SuspendLayout();
             panel3.SuspendLayout();
+            tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvKetQua).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -219,6 +230,15 @@
             // 
             // tabPage5
             // 
+            tabPage5.Controls.Add(button1);
+            tabPage5.Controls.Add(label3);
+            tabPage5.Controls.Add(txtDoanhThu);
+            tabPage5.Controls.Add(dgvKetQua);
+            tabPage5.Controls.Add(dateTimePicker2);
+            tabPage5.Controls.Add(dtpDenNgay);
+            tabPage5.Controls.Add(cbDoUong);
+            tabPage5.Controls.Add(chkNgay);
+            tabPage5.Controls.Add(chkDoUong);
             tabPage5.Location = new Point(4, 24);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
@@ -226,6 +246,83 @@
             tabPage5.TabIndex = 4;
             tabPage5.Text = "tabPage5";
             tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(365, 157);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(520, 405);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 7;
+            label3.Text = "label3";
+            // 
+            // txtDoanhThu
+            // 
+            txtDoanhThu.Location = new Point(607, 397);
+            txtDoanhThu.Name = "txtDoanhThu";
+            txtDoanhThu.Size = new Size(100, 23);
+            txtDoanhThu.TabIndex = 6;
+            // 
+            // dgvKetQua
+            // 
+            dgvKetQua.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvKetQua.Location = new Point(18, 186);
+            dgvKetQua.Name = "dgvKetQua";
+            dgvKetQua.Size = new Size(778, 192);
+            dgvKetQua.TabIndex = 5;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(443, 126);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(200, 23);
+            dateTimePicker2.TabIndex = 4;
+            // 
+            // dtpDenNgay
+            // 
+            dtpDenNgay.Location = new Point(179, 126);
+            dtpDenNgay.Name = "dtpDenNgay";
+            dtpDenNgay.Size = new Size(200, 23);
+            dtpDenNgay.TabIndex = 3;
+            // 
+            // cbDoUong
+            // 
+            cbDoUong.FormattingEnabled = true;
+            cbDoUong.Items.AddRange(new object[] { "Cafe", "Nước ép cam" });
+            cbDoUong.Location = new Point(207, 44);
+            cbDoUong.Name = "cbDoUong";
+            cbDoUong.Size = new Size(121, 23);
+            cbDoUong.TabIndex = 2;
+            // 
+            // chkNgay
+            // 
+            chkNgay.AutoSize = true;
+            chkNgay.Location = new Point(53, 126);
+            chkNgay.Name = "chkNgay";
+            chkNgay.Size = new Size(82, 19);
+            chkNgay.TabIndex = 1;
+            chkNgay.Text = "checkBox2";
+            chkNgay.UseVisualStyleBackColor = true;
+            // 
+            // chkDoUong
+            // 
+            chkDoUong.AutoSize = true;
+            chkDoUong.Location = new Point(53, 44);
+            chkDoUong.Name = "chkDoUong";
+            chkDoUong.Size = new Size(82, 19);
+            chkDoUong.TabIndex = 0;
+            chkDoUong.Text = "checkBox1";
+            chkDoUong.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -248,6 +345,9 @@
             panel5.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            tabPage5.ResumeLayout(false);
+            tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvKetQua).EndInit();
             ResumeLayout(false);
         }
 
@@ -270,5 +370,14 @@
         private Panel panel3;
         private TextBox txtThanhTien;
         private Label label2;
+        private Label label3;
+        private TextBox txtDoanhThu;
+        private DataGridView dgvKetQua;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpDenNgay;
+        private ComboBox cbDoUong;
+        private CheckBox chkNgay;
+        private CheckBox chkDoUong;
+        private Button button1;
     }
 }
